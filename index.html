@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <title></title>
@@ -16,10 +17,12 @@
          <div class="line-3"></div>
      </div>
      <nav class="nav-bar">
+       <div class="nav-wrapper">
        <li><a href="#Home" class="home">Home</a></li>
        <li><a href="#Story" class="story">My Story</a></li>
        <li><a href="#Skills" class="skills">Skills</a></li>
        <li><a href="#Projects" class="projects">Projects</a></li>
+     </div>
      </nav>
    </div>
    </header>
@@ -50,7 +53,6 @@
   <p class="button">Contact</p>
 </div> -->
    </section>
-   <div class="fade-in"></div>
    <section id="Story">
      <p class="background-text">profile</p>
      <img class="background" src="img/book-open-outline.png">
@@ -80,39 +82,25 @@
 
     </div>
     </div>
-    <div class="container">
-  <form id="contact" action="contactform.php" method="post">
-    <h3>Contactformular</h3>
-    <h4>Kontaktieren sie uns noch heute!</h4>
-    <fieldset>
-      <input placeholder="Name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Email" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Subject" type="text" tabindex="3" required>
-    </fieldset>
-    <fieldset>
-      <textarea placeholder="Message..." tabindex="5" required></textarea>
-    </fieldset>
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Senden</button>
-    </fieldset>
-    <fieldset>
-    </fieldset>
-  </form>
-</div>
-   </section>
+</section>
    <section id="Skills">
+     <div class="hero-heading">
+     <h2 class="heading">Skills</h2>
+   </div>
+     <div class="hero-skills">
       <div class="Web Development">
-
+        <p class="web-text">I Develop Websites and Web apps with technologies such as:</p>
       </div>
       <div class="Video Editing">
-
+        <p class="video-text">I edit videos on youtube with technologies such as:</p>
       </div>
+    </div>
    </section>
    <section id="Projects">
+     <div class="hero-heading">
+     <h2 class="heading">Projects</h2>
+   </div>
+     <div class="hero-project">
      <div class="ekb-project">
        <div class="non-hover">
           <h2>ekb-energy</h2>
@@ -146,6 +134,7 @@
            At vero eos et accusam et</p>
        </div>
      </div>
+   </div>
    </section>
 
      <footer>
