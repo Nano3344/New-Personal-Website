@@ -30,9 +30,6 @@ navburger.addEventListener('click', slideIn);
 function slideIn() {
    navbar.style.display = 'block';
 }
-$(navburger).click(function() {
-  navburger.toggleClass("close");
-})
 
 // Contact Form
 

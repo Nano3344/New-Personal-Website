@@ -34,7 +34,7 @@ header {
   transition: 0.5s;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 2;
+  z-index: 1;
 }
 .nav-burger:hover {
   cursor: pointer;
@@ -45,6 +45,7 @@ header {
   height: 5px;
   background-color: #212121;
   transition: 0.5s;
+  z-index: 1;
 }
 .nav-burger:hover div{
   width: 35px;
@@ -67,29 +68,32 @@ header {
 .nav-bar {
   display: none;
   position: absolute;
-  height: 100%;
-  width: 100vw;
-  background-color: white;
+  height: 100vh;
+  width: 200px;
+  background-color: #212121;
   top: 0;
-  left: 0;
+  right: 0;
   list-style: none;
-  z-index: 1;
+  z-index: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .nav-bar .nav-wrapper {
   height: 100%;
-  width: 50%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  z-index: 0;
 }
 .nav-bar a{
   text-decoration: none;
-  color: #202020;
+  color: white;
   font-weight: bold;
   font-size: 25px;
 }
 .nav-bar a:hover {
+  opacity: 0.6;
   transition: 0.5s;
 }
 section {
@@ -97,8 +101,7 @@ section {
   min-height: 100vh;
 }
 .gradient-background {
-  background-color: red;
-  opacity: 0.5;
+  background-color: #F44336;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -120,6 +123,7 @@ section {
 }
 }
 #logo {
+  width: 100%;
   animation: fill 0.5s ease forwards 2.5s;
 }
 #logo path:nth-child(1) {
@@ -247,13 +251,60 @@ section {
   }
 }
 #Story {
+  display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
   font-family: Raleway;
   width: 100%;
 }
-#Story .background-text {
+#Story .hero-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 730px;
+  height: 330px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #F44336;
+}
+#Story .hero-content {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+#Story .hero-content img {
+  border-radius: 50%;
+}
+#Story a {
+  text-decoration: none;
+  color: black;
+}
+#Story p {
+width: 400px;
+}
+#Story h2 {
+  font-size: 30px;
+  padding: 20px;
+}
+@media (max-width: 800px) {
+  .hero-profile {
+    width: 200px;
+    height: 400px;
+  }
+  .hero-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-content img {
+    display: none;
+  }
+  #Story p {
+    width: 80%;
+  }
+}
+/* #Story .background-text {
   position: absolute;
   top: 20%;
   left: 70%;
@@ -326,17 +377,6 @@ section {
   color: white;
   transition: 0.5s;
 }
-/*.Flip-Card .back .social-media {
-  margin-top: 10px;
-}
-.Flip-Card .back .social-media a {
-  display: inline-block;
-  padding: 5px 5px 0px;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}*/
 .Flip-Card:hover .back {
   transform: rotateX(0deg);
 }
@@ -348,13 +388,13 @@ section {
   display: none;
 }
 }
-
+*/
 @media (max-width: 600px) {
    header {
-     padding: 30px 20px 0;
+     padding: 30px 40px 0;
    }
    #logo {
-     transform: scale(0.6, 0.6);
+     transform: scale(0.7, 0.7);
    }
    .profile {
      transform: scale(0.7, 0.7);
@@ -375,7 +415,7 @@ section {
   display: flex;
   justify-content: center;
   font-family: Raleway;
-  font-weight: lighter;
+  font-weight: bold;
   font-size: 25px;
   border-bottom: 2px solid #F44336;
 }
@@ -389,11 +429,23 @@ section {
 }
 #Skills .hero-skills {
   height: 80vh;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
+#Skills .Web-Development {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#Skills .Video-Editing {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* Projects Page */
 
 #Projects {
@@ -405,31 +457,23 @@ section {
 
 #Projects .hero-project {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 80vh;
-  width: 100%;
+  width: 60%;
 }
-#Projects div {
+#Projects img {
   text-align: center;
   font-family: Raleway;
-  width: 300px;
+  width: 250px;
 }
-#Projects .ekb-project {
-  margin-right: 100px;
-}
-#Projects .Restaurant-project {
-  margin-left: 100px;
-}
-#Projects .hover {
+#Projects .non-hover {
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   background-color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 @media (max-width: 1120px) {
 #Projects .hero-project {
