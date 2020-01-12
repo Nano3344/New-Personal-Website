@@ -96,7 +96,7 @@ header {
   opacity: 0.6;
   transition: 0.5s;
 }
-section {
+section:not(#Skills) {
   display: flex;
   min-height: 100vh;
 }
@@ -431,30 +431,74 @@ width: 400px;
 }
 
 #Skills {
+  display: flex;
   width: 100%;
+  height: 200vh
   align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: Raleway;
 }
 #Skills .hero-skills {
-  height: 80vh;
+  height: 180vh;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 #Skills .Web-Development {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+#Skills .Web-Development .text-section {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#Skills .Web-Development .image-section {
+  height: 100%;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+#Skills .pictures {
+  width: 90%;
+  border: 2px solid #F44336;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 40px 0 rgba(0, 0, 0, 0.50);
+}
 #Skills .Video-Editing {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+#Skills .Video-Editing .image-section {
+  height: 100%;
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#Skills .Video-Editing .text-section {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-section p {
+  width: 70%;
+}
+.text-section h2 {
+  margin-bottom: 20px;
 }
 /* Projects Page */
 
