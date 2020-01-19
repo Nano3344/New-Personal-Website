@@ -5,9 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/logo-notext.png">
     <title></title>
   </head>
   <body>
+    <div class="contact-background" id="contact-background"></div>
+    <div class="contact-wrapper">
+    <div class="contact-form">
+      <div class="contact-content">
+        <span class="exit-button">&times;</span>
+        <h2>Contact Me!</h2>
+        <div class="section">
+           <input type="text" placeholder="Your Name" required>
+        </div>
+        <div class="section">
+           <input type="text" placeholder="Your email" required>
+        </div>
+        <div class="section">
+           <textarea type="text" placeholder="Message..."></textarea>
+        </div>
+        <div class="button-section">
+            <p class="submit" id="submit">Submit</p>
+        </div>
+      </div>
+    </div>
+  </div>
    <header>
      <h2>Malik Ebers</h2>
      <div class="navigation">
@@ -18,6 +40,7 @@
      </div>
      <nav class="nav-bar">
        <div class="nav-wrapper">
+       <span class="close-nav" id="close-nav">&times;</span>
        <li><a href="#Home" class="home">Home</a></li>
        <li><a href="#Story" class="story">About</a></li>
        <li><a href="#Skills" class="skills">Skills</a></li>
@@ -50,7 +73,7 @@
 <path d="M287.88 241.576C284.595 241.576 281.608 240.829 278.92 239.336C276.275 237.843 274.184 235.731 272.648 233C271.155 230.227 270.408 227.027 270.408 223.4C270.408 219.816 271.176 216.659 272.712 213.928C274.291 211.155 276.424 209.043 279.112 207.592C281.8 206.099 284.808 205.352 288.136 205.352C291.464 205.352 294.472 206.099 297.16 207.592C299.848 209.043 301.96 211.133 303.496 213.864C305.075 216.595 305.864 219.773 305.864 223.4C305.864 227.027 305.054 230.227 303.432 233C301.854 235.731 299.699 237.843 296.968 239.336C294.238 240.829 291.208 241.576 287.88 241.576ZM287.88 236.456C289.971 236.456 291.934 235.965 293.768 234.984C295.603 234.003 297.075 232.531 298.184 230.568C299.336 228.605 299.912 226.216 299.912 223.4C299.912 220.584 299.358 218.195 298.248 216.232C297.139 214.269 295.688 212.819 293.896 211.88C292.104 210.899 290.163 210.408 288.072 210.408C285.939 210.408 283.976 210.899 282.184 211.88C280.435 212.819 279.027 214.269 277.96 216.232C276.894 218.195 276.36 220.584 276.36 223.4C276.36 226.259 276.872 228.669 277.896 230.632C278.963 232.595 280.371 234.067 282.12 235.048C283.87 235.987 285.79 236.456 287.88 236.456Z" stroke="#202020" stroke-width="2.5"/>
 <path d="M319.346 211.624C320.37 209.619 321.82 208.061 323.698 206.952C325.618 205.843 327.943 205.288 330.674 205.288V211.304H329.138C322.61 211.304 319.346 214.845 319.346 221.928V241H313.522V205.928H319.346V211.624Z" stroke="#202020" stroke-width="2.5"/>
 </svg>
-<a id="contact" href="">Contact</a>
+<p class="contact-button" id="contact-button">Contact</p>
    </section>
    <section id="Story">
     <div class="hero-profile">
@@ -101,19 +124,19 @@
      <h2 class="heading">Projects</h2>
    </div>
      <div class="hero-project">
-     <div class="ekb-project">
+     <div class="Restaurant-project">
        <div class="non-hover">
           <img src="/img/project-picture-1.png">
        </div>
      </div>
      <div class="Heizung-project">
        <div class="non-hover">
-          <img src="/img/project-picture-2.png">
+          <a href="https://nano3344.github.io/Airpod-sampler/"><img src="/img/project-picture-2.png"></a>
        </div>
      </div>
-     <div class="Restaurant-project">
+     <div class="ekb-project">
        <div class="non-hover">
-           <img src="/img/project-picture-3.png">
+           <a href="https://ekb-energy.de/"><img src="/img/project-picture-3.png"></a>
        </div>
      </div>
    </div>

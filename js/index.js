@@ -24,22 +24,34 @@ for(let i = 0; i < logo.length; i++) {
 
 const navburger = document.querySelector('.nav-burger');
 const navbar = document.querySelector('.nav-bar');
+const exitNav = document.querySelector('.close-nav');
 
 navburger.addEventListener('click', slideIn);
+exitNav.addEventListener('click', slideOut);
 
 function slideIn() {
    navbar.style.display = 'block';
 }
+function slideOut() {
+  navbar.style.display = 'none';
+}
 
 // Contact Form
+var contactBackground = document.querySelector('.contact-background');
+var contactWrapper = document.querySelector('.contact-wrapper');
+var contactButton = document.querySelector('.contact-button');
+var submitButton = document.querySelector('.submit');
+var exitButton = document.querySelector('.exit-button');
 
-const contactBtn = document.querySelector('.contact');
-const container = document.querySelector('.container');
-const black = document.querySelector('.fade-in');
+contactButton.addEventListener('click', loadContact);
+submitButton.addEventListener('click', closeContact);
+exitButton.addEventListener('click', closeContact);
 
-contactBtn.addEventListener('click', form);
-
-function form() {
-    container.style.display = 'block';
-    black.style.display = 'block';
+function loadContact() {
+  contactBackground.style.display = 'block';
+  contactWrapper.style.display = 'block';
+}
+function closeContact() {
+  contactBackground.style.display = 'none';
+  contactWrapper.style.display = 'none';
 }
