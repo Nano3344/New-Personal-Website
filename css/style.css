@@ -15,6 +15,9 @@
   src: url('./fonts/Raleway.ttf');
   font-family: Raleway;
 }
+
+/* Contact Form */
+
 .contact-background {
   display: none;
   position: fixed;
@@ -61,10 +64,15 @@
 }
 .contact-content .section {
   padding: 10px;
+  width: 100%;
 }
 .contact-content .section input[type="text"] {
   width: 100%;
   padding: 10px;
+}
+.contact-content .section textarea[type="text"] {
+  width: 100%;
+  resize: none;
 }
 .contact-content .button-section p{
   padding: 10px 5px;
@@ -76,6 +84,7 @@
 .contact-content .button-section p:hover{
   cursor: pointer;
 }
+
 header {
   position: fixed;
   display: flex;
@@ -88,6 +97,14 @@ header {
   z-index: 1;
   animation: HomeFadeIn 2s ease 0s;
 }
+
+@media (max-width: 600px) {
+  header {
+    font-size: 14px;
+  }
+}
+/* Navigation Icon */
+
 .nav-burger {
   display: inline-block;
   padding: 16px;
@@ -126,17 +143,28 @@ header {
   width: 25px;
   transform: rotate(0deg);
 }
+@media (max-width: 600px) {
+   .nav-burger {
+     transform: scale(0.8, 0.8);
+   }
+}
+/* Navigation Bar */
+
 .nav-bar {
-  display: none;
+  display: block;
   position: absolute;
   height: 100vh;
   width: 200px;
   background-color: #212121;
   top: 0;
-  right: 0;
+  right: -300px;
   list-style: none;
   z-index: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: 0.8s all;
+}
+.navFade {
+  right: 0px;
 }
 .nav-bar .nav-wrapper {
   height: 100%;
@@ -168,10 +196,14 @@ header {
   opacity: 0.6;
   transition: 0.5s;
 }
+
 section:not(#Skills) {
   display: flex;
   min-height: 100vh;
 }
+
+/* Home Section */
+
 .gradient-background {
   opacity: 1;
   background-color: white;
@@ -300,14 +332,14 @@ section:not(#Skills) {
   font-weight: bold;
   border-radius: 5px;
   font-size: 20px;
-  border: 3px solid #212121;
-  color: white;
-  background-color: #212121;
+  border: 3px solid #F44336;
+  color: #F44336;
   padding: 10px 40px 10px;
   animation: HomeFadeIn 2s ease 0s;
 }
 #contact-button:hover {
-  background-color: #212121;
+  background-color: #F44336;
+  color: white;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -324,6 +356,9 @@ section:not(#Skills) {
     fill: #212121;
   }
 }
+
+/* About Section */
+
 #Story {
   display: flex;
   position: relative;
@@ -387,7 +422,7 @@ width: 400px;
    }
 }
 
-/* Skills Page */
+/* Skills Section */
 
 .hero-heading {
   width: 100%;
@@ -496,7 +531,8 @@ width: 400px;
     width: 100%;
   }
 }
-/* Projects Page */
+
+/* Projects Section */
 
 #Projects {
   width: 100%;
@@ -542,6 +578,12 @@ width: 400px;
   margin: 0px;
 }
 }
+#Projects .hero-project .project-text p{
+  width: 250px;
+}
+
+/* Footer */
+
 footer {
   width: 100%;
   display: flex;

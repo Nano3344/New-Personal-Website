@@ -1,3 +1,5 @@
+// Smooth scrolling
+
 $(function() {
   $('a[href^="#"]').stop().click(function() {
      if(location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
@@ -16,27 +18,36 @@ $(function() {
   });
 });
 
+// Homepage SVG
+
 const logo = document.querySelectorAll('#logo path');
 
 for(let i = 0; i < logo.length; i++) {
   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }
 
+
+
 const navburger = document.querySelector('.nav-burger');
 const navbar = document.querySelector('.nav-bar');
 const exitNav = document.querySelector('.close-nav');
 
-navburger.addEventListener('click', slideIn);
+$('.nav-burger').on('click', function() {
+  $('.nav-bar').toggleClass('.navFade');
+});
+
+//navburger.addEventListener('click', slideIn);
 exitNav.addEventListener('click', slideOut);
 
-function slideIn() {
-   navbar.style.display = 'block';
-}
+//function slideIn() {
+//   navbar.style.display = 'block';
+//}
 function slideOut() {
-  navbar.style.display = 'none';
+ navbar.style.display = 'none';
 }
 
 // Contact Form
+
 var contactBackground = document.querySelector('.contact-background');
 var contactWrapper = document.querySelector('.contact-wrapper');
 var contactButton = document.querySelector('.contact-button');
