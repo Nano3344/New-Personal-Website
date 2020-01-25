@@ -32,16 +32,12 @@ const navburger = document.querySelector('.nav-burger');
 const navbar = document.querySelector('.nav-bar');
 const exitNav = document.querySelector('.close-nav');
 
-$('.nav-burger').on('click', function() {
-  $('.nav-bar').toggleClass('.navFade');
-});
-
-//navburger.addEventListener('click', slideIn);
+navburger.addEventListener('click', slideIn);
 exitNav.addEventListener('click', slideOut);
 
-//function slideIn() {
-//   navbar.style.display = 'block';
-//}
+function slideIn() {
+   navbar.style.display = 'block';
+}
 function slideOut() {
  navbar.style.display = 'none';
 }
