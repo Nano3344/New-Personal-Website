@@ -160,6 +160,7 @@ header {
   z-index: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   transition: 0.8s all;
+  z-index: 2;
 }
 .navFade {
   right: 0px;
@@ -201,21 +202,7 @@ section:not(#Skills) {
 }
 
 /* Home Section */
-.background {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.bubble-1 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  top: 450px;
-  left: 200px;
-  background-color: #F44336;
-  border-radius: 50%;
-  z-index: 1;
-}
+
 #Home {
   position: relative;
   align-items: center;
@@ -235,6 +222,7 @@ section:not(#Skills) {
 #logo {
   width: 100%;
   animation: fill 0.5s ease forwards 2.5s;
+  z-index: 1;
 }
 #logo path:nth-child(1) {
    stroke-dasharray: 356;
@@ -331,6 +319,10 @@ section:not(#Skills) {
   stroke-dashoffset: 109;
   animation: WriteEffect 2s ease forwards;
 }
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
 #contact-button {
   text-decoration: none;
   margin-top: 50px;
@@ -341,6 +333,7 @@ section:not(#Skills) {
   color: #F44336;
   padding: 10px 40px 10px;
   animation: HomeFadeIn 2s ease 0s;
+  z-index: 0;
 }
 #contact-button:hover {
   background-color: #F44336;
@@ -485,9 +478,7 @@ width: 400px;
   align-items: center;
 }
 #Skills .pictures {
-  width: 90%;
-  border: 2px solid #F44336;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.50), 0 6px 40px 0 rgba(0, 0, 0, 0.50);
+  width: 65%;
 }
 #Skills .Video-Editing {
   width: 100%;
@@ -509,6 +500,10 @@ width: 400px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+#Skills .Video-Editing .text-section .channel-name {
+  text-decoration: none;
+  color: black;
 }
 .text-section p {
   width: 70%;
