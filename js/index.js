@@ -47,10 +47,12 @@ function slideOut() {
 var contactBackground = document.querySelector('.contact-background');
 var contactWrapper = document.querySelector('.contact-wrapper');
 var contactButton = document.querySelector('.contact-button');
+var contactButton2 = document.querySelector('.contact-button-2');
 var submitButton = document.querySelector('.submit');
 var exitButton = document.querySelector('.exit-button');
 
 contactButton.addEventListener('click', loadContact);
+contactButton2.addEventListener('click', loadContact);
 submitButton.addEventListener('click', closeContact);
 exitButton.addEventListener('click', closeContact);
 

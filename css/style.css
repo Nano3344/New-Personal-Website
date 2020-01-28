@@ -179,7 +179,7 @@ header {
   font-weight: bold;
   font-size: 40px;
   color: white;
-  bottom: 240px;
+  bottom: 230px;
   right: 70px;
 }
 .nav-bar .close-nav:hover {
@@ -195,7 +195,17 @@ header {
   opacity: 0.6;
   transition: 0.5s;
 }
-
+.nav-bar p {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.nav-bar p:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+  cursor: pointer;
+}
 /* Home Section */
 
 #Home {
