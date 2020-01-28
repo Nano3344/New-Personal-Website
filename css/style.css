@@ -503,8 +503,13 @@ width: 400px;
   justify-content: center;
   align-items: center;
 }
+#Skills .Web-Development .image-section .code-logo {
+  position: absolute;
+  width: 15%;
+}
 #Skills .pictures {
   width: 65%;
+  opacity: 0.5;
 }
 #Skills .Video-Editing {
   width: 100%;
@@ -518,6 +523,10 @@ width: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#Skills .Video-Editing .image-section .video-logo {
+  position: absolute;
+  width: 15%;
 }
 #Skills .Video-Editing .text-section {
   height: 100%;
@@ -576,12 +585,19 @@ width: 400px;
   height: 80vh;
   width: 900px;
 }
-#Projects img {
+#Projects .picture {
   text-align: center;
   font-family: Raleway;
   width: 250px;
   z-index: 1;
   transition: 0.5s;
+}
+#Picture .icon {
+  background-color: grey;
+  padding: 20px;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
 }
 #Projects .non-hover {
   position: relative;
