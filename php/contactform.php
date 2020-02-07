@@ -1,19 +1,24 @@
 <?php
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $betreff = $_POST['betreff'];
+  $nachricht = $_POST['nachricht'];
 
-if(isset($_POST['submit'])) {
-  $name = $_POST['Name'];
-  $betreff = $_POST['Betreff'];
-  $email = $_POST['Email'];
-  $nachricht = $_POST['Nachricht'];
+  $email_from = $email;
 
-  $emailFrom = $email;
-  $emailTo = "malik.ebers@web.de";
+  $email_subject = 'Anfrage';
 
-  setcookie('Information', $name, $betreff, $email, $nachricht, time()+3600);
+  $email_body = "User Name: $name.\n",
+                "User Email: $email.\n",
+                "User Message: $message.\n";
 
-  $headers = "From: $emailFrom \r\n";
-  $txt = "You have received an email from ".$name.".\n\n".$nachricht;
+  $to = "malik.ebers@web.de";
 
-  mail($emailTo, $betreff, $nachricht, $headers);
-  header("Location: index.html");
-}
+  $headers = "Von: $email_from \r\n";
+
+  $headers = "Antworten-auf: $email \r\n";
+
+  mail($to, $email_subject, $email_body, $headers);
+
+  header("Location: Kontakt.html");
+ ?>
