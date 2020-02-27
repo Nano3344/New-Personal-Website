@@ -346,7 +346,7 @@ header {
   display: flex;
   justify-content: center;
 }
-#contact-button {
+#work-button {
   text-decoration: none;
   margin-top: 50px;
   font-weight: bold;
@@ -358,7 +358,7 @@ header {
   animation: HomeFadeIn 2s ease 0s;
   z-index: 0;
 }
-#contact-button:hover {
+#work-button:hover {
   background-color: #F44336;
   color: white;
   cursor: pointer;
