@@ -91,13 +91,15 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 30px 100px 0;
+  padding: 20px 100px 0;
   font-family: Raleway;
   color: #212121;
   z-index: 1;
   animation: HomeFadeIn 2s ease 0s;
 }
-
+header img {
+  width: 60px;
+}
 @media (max-width: 600px) {
   header {
     font-size: 14px;
