@@ -211,14 +211,34 @@ header img {
 /* Home Section */
 
 #Home {
+  display: flex;
   position: relative;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
   font-family: Raleway;
-  font-size: 30px;
   min-height: 100vh;
+  width: 100%;
+}
+#Home .Left-Side {
+  width: 50%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+}
+#Home .Left-Side a {
+  text-decoration: none;
+  color: #F44336;
+  font-weight: bold;
+  padding: 10px 25px;
+  border: 3px solid #F44336;
+  border-radius: 4px;
+}
+#Home .Left-Side div {
+  margin-top: 20px;
+}
+#Home .Right-Side {
+  width: 50%;
+  height: 100%;
 }
 @keyframes HomeFadeIn {
 0% {
@@ -228,6 +248,7 @@ header img {
   opacity: 1;
 }
 }
+/*
 #logo {
   width: 100%;
   animation: fill 0.5s ease forwards 2.5s;
@@ -390,6 +411,8 @@ header img {
      transform: translateY(10px);
    }
 }
+
+*/
 
 /* About Section */
 
@@ -602,14 +625,15 @@ width: 400px;
   font-family: Raleway;
   width: 300px;
   z-index: 1;
+  padding: 10px;
   transition: 0.5s;
 }
-#Picture .icon {
-  background-color: grey;
-  padding: 20px;
-  width: 36px;
-  height: 36px;
-  z-index: 2;
+#Projects .pro {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 #Projects .non-hover {
   position: relative;
@@ -619,18 +643,10 @@ width: 400px;
   align-content: center;
   z-index: 0;
 }
-@media (max-width: 1120px) {
-#Projects .hero-project {
-  flex-direction: column;
-  height: 100vh;
-  width: 60%;
-  margin-bottom: 40px;
-}
-}
 #Projects .hero-project .project-buttons {
-  width: 300px;
+  width: 200px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-content: center;
 }
 #Projects .hero-project .project-buttons a {
@@ -647,7 +663,14 @@ width: 400px;
   background-color: #F44336;
   color: white;
 }
-
+@media (max-width: 1120px) {
+#Projects .hero-project {
+  flex-direction: column;
+  height: 100vh;
+  width: 60%;
+  margin-bottom: 40px;
+}
+}
 /* Footer */
 
 footer {
