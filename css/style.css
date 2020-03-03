@@ -415,63 +415,6 @@ header img {
    }
 }
 
-*/
-
-/* About Section */
-
-#Story {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  font-family: Raleway;
-  width: 100%;
-  height: 60vh;
-}
-#Story .hero-profile {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 730px;
-  height: 330px;
-  padding: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border: 2px solid #F44336;
-  transform: scale(0.8, 0.8);
-}
-#Story .hero-content {
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-}
-#Story .hero-content img {
-  border-radius: 50%;
-}
-#Story a {
-  text-decoration: none;
-  color: black;
-}
-#Story p {
-width: 400px;
-}
-#Story h2 {
-  font-size: 30px;
-  padding: 20px;
-}
-@media (max-width: 800px) {
-  #Story .hero-profile {
-    width: 400px;
-    height: 400px;
-    justify-content: center;
-  }
-  #Story p {
-    text-align: center;
-    width: 300px;
-  }
-  #Story img {
-    display: none;
-  }
-}
 @media (max-width: 600px) {
    header {
      padding: 30px 40px 0;
@@ -484,6 +427,66 @@ width: 400px;
    }
 }
 
+*/
+
+/* About Section */
+
+#Story {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  font-family: Raleway;
+  width: 100%;
+  height: 100vh;
+}
+#Story .hero-profile {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+#Story .hero-profile .image-content {
+  position: relative;
+}
+#Story .hero-profile img {
+  width: 350px;
+  transform: rotate(-90deg);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#Story .hero-profile .rectangle {
+  width: 250px;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  background-color: #F44336;
+  z-index: -1;
+}
+#Story .hero-profile .hero-content {
+  width: 500px;
+}
+#Story .hero-content h2{
+  margin-bottom: 30px;
+}
+#Story .hero-content p {
+  width: 500px;
+}
+#Story .hero-content a {
+  text-decoration: none;
+  color: #212121;
+}
+@media (max-width: 850px) {
+  #Story .hero-profile {
+    transform: scale(0.7, 0.7);
+  }
+}
+@media (max-width: 600px) {
+  #Story .hero-profile {
+    flex-direction: column;
+  }
+}
 /* Skills Section */
 
 .hero-heading {

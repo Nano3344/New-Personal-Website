@@ -62,3 +62,19 @@ function closeContact() {
   contactBackground.style.display = 'none';
   contactWrapper.style.display = 'none';
 }
+
+// Scroll Effect
+$(window).scroll(function(){
+
+})
+
+function eachAnim(name) {
+  $('.' + name).each(function() {
+    switch (name) {
+      case 'left-fade': AddClass(this, 'fade');
+        break;
+      case 'right-fade': AddClass(this, 'fade');
+        break;
+    }
+  });
+};
