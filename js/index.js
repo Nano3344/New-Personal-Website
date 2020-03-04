@@ -64,17 +64,30 @@ function closeContact() {
 }
 
 // Scroll Effect
+EachAnim('leftfade');
+
 $(window).scroll(function(){
+  EachAnim('leftfade');
+});
 
-})
-
-function eachAnim(name) {
+function EachAnim(name) {
   $('.' + name).each(function() {
     switch (name) {
-      case 'left-fade': AddClass(this, 'fade');
-        break;
-      case 'right-fade': AddClass(this, 'fade');
+      case 'leftfade': AddClass(this, 'fade-left');
         break;
     }
   });
 };
+
+function AddClass(object, name) {
+  if(IsVisible(object)) {
+    $(object).addClass(name);
+  }
+}
+
+function IsVisible(object) {
+  var viewport = $(window).scrollTop() + $(window).height();
+  var border = $(object).offset();
+  border.bottom = border.top + $(object).outerHeight();
+  return (!(viewport < (border.top + 250) || $(window).scrollTop() > (border.bottom)));
+}

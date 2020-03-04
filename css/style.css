@@ -208,6 +208,7 @@ header img {
   transition: 0.5s;
   cursor: pointer;
 }
+
 /* Home Section */
 
 #Home {
@@ -235,6 +236,11 @@ header img {
   padding: 10px 25px;
   border: 3px solid #F44336;
   border-radius: 4px;
+}
+#Home .Left-Side a:hover {
+  transition: 0.5s;
+  background-color: #F44336;
+  color: white;
 }
 #Home .Left-Side div {
   margin-top: 20px;
@@ -451,6 +457,10 @@ header img {
 #Story .hero-profile .image-content {
   position: relative;
 }
+#Story .hero-profile .leftfade {
+  transition: all 400ms;
+  transform: translate(0px, 0);
+}
 #Story .hero-profile img {
   width: 350px;
   transform: rotate(-90deg);
@@ -477,6 +487,15 @@ header img {
   text-decoration: none;
   color: #212121;
 }
+#Story .hero-content .contact-button {
+  margin-top: 40px;
+  color: #F44336;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 2px solid #F44336;
+  width: 105px;
+  padding: 10px 20px;
+}
 @media (max-width: 850px) {
   #Story .hero-profile {
     transform: scale(0.7, 0.7);
@@ -485,6 +504,17 @@ header img {
 @media (max-width: 600px) {
   #Story .hero-profile {
     flex-direction: column;
+  }
+  #Story .hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    margin-top: 150px;
+  }
+  #Story .hero-content p {
+    width: 400px;
   }
 }
 /* Skills Section */
@@ -528,6 +558,7 @@ header img {
   height: 50%;
   display: flex;
   justify-content: center;
+  flex-direction: row-reverse;
 }
 #Skills .Web-Development .text-section {
   height: 100%;
@@ -547,6 +578,7 @@ header img {
 #Skills .Web-Development .image-section .code-logo {
   position: absolute;
   width: 20%;
+  animation: floating 3s ease infinite;
 }
 #Skills .pictures {
   width: 65%;
@@ -568,6 +600,7 @@ header img {
 #Skills .Video-Editing .image-section .video-logo {
   position: absolute;
   width: 20%;
+  animation: floating ease 3s infinite;
 }
 #Skills .Video-Editing .text-section {
   height: 100%;
@@ -588,23 +621,37 @@ header img {
   margin-bottom: 20px;
 }
 @media (max-width: 650px) {
-  #Skills .hero-skills {
-    height: 80vh;
-  }
-  #Skills .hero-skills {
-    height: 80vh;
+  #Skills .Web-Development {
+    flex-direction: column;
   }
   #Skills .Web-Development .image-section {
-    display: none;
+    width: 100%;
+  }
+  #Skills .Video-Editing {
+    flex-direction: column;
+  }
+  #Skills .Video-Editing .image-section {
+    width: 100%;
+  }
+  #Skills .hero-skills {
+    height: 80vh;
   }
   #Skills .Web-Development .text-section {
     width: 100%;
   }
-  #Skills .Video-Editing .image-section {
-    display: none;
-  }
   #Skills .Video-Editing .text-section {
     width: 100%;
+  }
+}
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 
@@ -721,4 +768,11 @@ footer p {
   font-family: Raleway;
   font-weight: bolder;
   color: #212121;
+}
+
+/* Fade classes
+
+.fade-left {
+  transform: translate(200px, 0);
+  opacity: 1;
 }
