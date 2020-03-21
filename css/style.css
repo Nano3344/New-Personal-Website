@@ -253,6 +253,7 @@ header img {
 }
 #Home .Right-Side img{
   width: 85%;
+  animation: FloatIn 1s ease;
 }
 @media (max-width: 800px) {
   #Home {
@@ -271,6 +272,16 @@ header img {
     height: 50%;
   }
 }
+@keyframes FloatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 @keyframes HomeFadeIn {
 0% {
   opacity: 0;
@@ -279,183 +290,6 @@ header img {
   opacity: 1;
 }
 }
-/*
-#logo {
-  width: 100%;
-  animation: fill 0.5s ease forwards 2.5s;
-  z-index: 1;
-}
-#logo path:nth-child(1) {
-   stroke-dasharray: 356;
-   stroke-dashoffset: 356;
-   animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(2) {
-  stroke-dasharray: 229;
-  stroke-dashoffset: 229;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(3) {
-  stroke-dasharray: 249;
-  stroke-dashoffset: 249;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(4) {
-  stroke-dasharray: 249;
-  stroke-dashoffset: 249;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(5) {
-  stroke-dasharray: 229;
-  stroke-dashoffset: 229;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(6) {
-  stroke-dasharray: 157;
-  stroke-dashoffset: 157;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(7) {
-  stroke-dasharray: 229;
-  stroke-dashoffset: 229;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(8) {
-  stroke-dasharray: 106;
-  stroke-dashoffset: 106;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(9) {
-  stroke-dasharray: 192;
-  stroke-dashoffset: 192;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(10) {
-  stroke-dasharray: 258;
-  stroke-dashoffset: 258;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(11) {
-  stroke-dasharray: 229;
-  stroke-dashoffset: 229;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(12) {
-  stroke-dasharray: 109;
-  stroke-dashoffset: 109;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(13) {
-  stroke-dasharray: 277;
-  stroke-dashoffset: 277;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(14) {
-  stroke-dasharray: 206;
-  stroke-dashoffset: 206;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(15) {
-  stroke-dasharray: 249;
-  stroke-dashoffset: 249;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(16) {
-  stroke-dasharray: 106;
-  stroke-dashoffset: 106;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(17) {
-  stroke-dasharray: 139;
-  stroke-dashoffset: 139;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(18) {
-  stroke-dasharray: 192;
-  stroke-dashoffset: 192;
-  animation: WriteEffect 2s ease forwards;
-}
-#logo path:nth-child(19) {
-  stroke-dasharray: 109;
-  stroke-dashoffset: 109;
-  animation: WriteEffect 2s ease forwards;
-}
-.home-background-1 {
-  position: absolute;
-  width: 20%;
-  top: 150px;
-  right: 100px;
-  z-index: -1;
-  animation: float 2s ease infinite;
-}
-.home-background-2 {
-  position: absolute;
-  width: 20%;
-  top: 300px;
-  left: 80px;
-  z-index: -1;
-  animation: float 3s ease infinite;
-}
-.button-wrapper {
-  display: flex;
-  justify-content: center;
-}
-#work-button {
-  text-decoration: none;
-  margin-top: 50px;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: 20px;
-  border: 3px solid #F44336;
-  color: #F44336;
-  padding: 10px 40px 10px;
-  animation: HomeFadeIn 2s ease 0s;
-  z-index: 0;
-}
-#work-button:hover {
-  background-color: #F44336;
-  color: white;
-  cursor: pointer;
-  transition: 0.5s;
-}
-@keyframes WriteEffect {
- 100%{
-   stroke-dashoffset: 0;
- }
-}
-@keyframes fill {
-  0% {
-    fill: transparent;
-  }
-  100%{
-    fill: #212121;
-  }
-}
-@keyframes float {
-   0% {
-     transform: translateY(10px);
-   }
-   50% {
-     transform: translateY(-10px);
-   }
-   100% {
-     transform: translateY(10px);
-   }
-}
-
-@media (max-width: 600px) {
-   header {
-     padding: 30px 40px 0;
-   }
-   #logo {
-     transform: scale(0.7, 0.7);
-   }
-   .profile {
-     transform: scale(0.7, 0.7);
-   }
-}
-
-*/
 
 /* About Section */
 
