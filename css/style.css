@@ -272,9 +272,14 @@ header img {
     width: 400px;
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 800px) {
+  #Home .Right-Side img {
+    width: 300px;
+  }
+}
+@media (max-width: 550px) {
   #Home {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 20vh;
   }
    #Home .Left-Side {
@@ -300,6 +305,7 @@ header img {
     align-items: center;
   }
   #Home .Right-Side img{
+    margin-top: 200px;
     width: 350px;
   }
 }
@@ -582,6 +588,19 @@ header img {
 }
 #Projects .Image-slider .image-wrapper img:hover {
   cursor: pointer;
+}
+@media (max-width: 950px) {
+  #Projects .Image-slider .image-1 img{
+    width: 500px;
+  }
+}
+@media (max-width: 650px) {
+   #Projects .Image-slider .image-1 img {
+     width: 360px;
+   }
+   #Projects .Image-slider .image-wrapper img {
+     width: 50px;
+   }
 }
 #Projects .hero-project {
   display: flex;
