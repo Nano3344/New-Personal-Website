@@ -93,3 +93,40 @@ function IsVisible(object) {
   border.bottom = border.top + $(object).outerHeight();
   return (!(viewport < (border.top + 250) || $(window).scrollTop() > (border.bottom)));
 }
+
+// Image Slider
+
+var leftSlide = document.querySelector('.image-wrapper');
+var rightSlide = document.querySelector('.image-wrapper-2');
+var Slides = document.querySelector('.Image-slider').children;
+var allSlide = Slides.length - 1;
+var index = 1;
+
+leftSlide.addEventListener('click', SlideLeft);
+rightSlide.addEventListener('click', SlideRight);
+
+function SlideLeft() {
+   nextSlide("left")
+}
+
+function SlideRight() {
+   nextSlide("right")
+}
+
+function nextSlide(direction) {
+  if(direction == "right") {
+    index++;
+    if(index==allSlide) {
+      index=1;
+    }
+  } else {
+    if(index==1) {
+      index=allSlide;
+    }
+    index--;
+  }
+  for(i = 0; i < Slides.length; i++) {
+     Slides[i].classList.remove('active');
+  }
+  Slides[index].classList.add('active');
+}
