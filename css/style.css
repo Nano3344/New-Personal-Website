@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  overflow-x: hidden;
+}
 @font-face {
   src: url('./fonts/Nature.ttf');
   font-family: Nature;
@@ -398,6 +401,16 @@ header img {
   color: white;
   transition: 0.5s;
 }
+#Story .Profile-Cube {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: black;
+  opacity: 0.2;
+  top: 250px;
+  right: -280px;
+  transform: rotate(-30deg);
+}
 
 /* mobile */
 
@@ -633,7 +646,15 @@ header img {
   border: 3px solid #212121;
   border-radius: 5px;
 }
-
+#Projects .Project-Cube {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 50;
+  transform: rotate(-30deg);
+  left: -200px;
+  background-color: #F44336;
+}
 /* mobile */
 
 @media (max-width: 950px) {
