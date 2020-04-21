@@ -233,7 +233,7 @@ header img {
   animation: HomeFadeIn 1s ease;
 }
 #Home .Left-Side h2 {
-  font-size: 40px;
+  font-size: 45px;
 }
 #Home .Left-Side a {
   text-decoration: none;
@@ -400,16 +400,6 @@ header img {
   background-color: #F44336;
   color: white;
   transition: 0.5s;
-}
-#Story .Profile-Cube {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background-color: black;
-  opacity: 0.2;
-  top: 250px;
-  right: -280px;
-  transform: rotate(-30deg);
 }
 
 /* mobile */
@@ -612,11 +602,13 @@ header img {
 #Projects .Image-slider .image img{
   width: 700px;
 }
-#Projects .Image-slider .image-wrapper img:hover {
+#Projects .Image-slider .image-wrapper img {
   cursor: pointer;
+  animation: leftright 2s ease infinite;
 }
-#Projects .Image-slider .image-wrapper-2 img:hover {
+#Projects .Image-slider .image-wrapper-2 img {
   cursor: pointer;
+  animation: rightleft 2s ease infinite;
 }
 #Projects .Image-slider .image .project-buttons {
   width: 100%;
@@ -702,4 +694,27 @@ footer p {
   font-family: Raleway;
   font-weight: bolder;
   color: #212121;
+}
+
+@keyframes leftright {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes rightleft {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
 }

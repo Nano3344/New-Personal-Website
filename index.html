@@ -55,8 +55,8 @@
    </header>
    <section id="Home">
     <div class="Left-Side">
-      <h2>Hi, my name is Malik Ebers</h2>
-      <p>I create amazing UI's / UX's in form of Websites and Web apps</p>
+      <h2 class="left-header">Hi, my name is Malik Ebers</h2>
+      <p class="left-text">I create amazing UI's / UX's in form of Websites and Web apps</p>
       <div class="button">
         <a href="#Projects">My Work</a>
       </div>
@@ -82,9 +82,6 @@
        </p>
        <p class="contact-button">Contact</p>
      </div>
-   </div>
-   <div class="Profile-Cube">
-
    </div>
 </section>
    <section id="Skills">
@@ -179,5 +176,11 @@
     </footer>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="./js/index.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script>
+     gsap.from('.left-header', {opacity: 0, duration: 1, y: -300})
+     gsap.from('.left-text', {opacity: 0, duration: 1, y: -200})
+     gsap.from('.button', {opacity: 0, duration: 1, y: -100})
+  </script>
   </body>
 </html>
