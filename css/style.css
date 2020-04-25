@@ -349,32 +349,28 @@ header img {
   width: 70%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 #Story .hero-profile .image-content {
-  position: relative;
-}
-#Story .hero-profile .leftfade {
-  transition: all 400ms;
-  transform: translate(0px, 0);
+   position: relative;
 }
 #Story .hero-profile img {
-  width: 350px;
-  transform: rotate(-90deg);
+  width: 250px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #Story .hero-profile .rectangle {
-  width: 250px;
+  width: 200px;
   height: 350px;
   position: absolute;
-  top: 0;
+  top: 50px;
+  left: -40px;
   background-color: #F44336;
   z-index: -1;
 }
 #Story .hero-profile .hero-content {
-  width: 500px;
+  width: 60%;
 }
 #Story .hero-content h2{
   margin-bottom: 30px;
@@ -419,7 +415,7 @@ header img {
     align-items: center;
     flex-direction: column;
     width: 350px;
-    margin-top: 150px;
+    margin-top: 50px;
   }
   #Story .hero-content p {
     width: 400px;
