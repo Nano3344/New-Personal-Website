@@ -78,7 +78,7 @@ var exitButton = document.querySelector('.exit-button');
 
 contactButton2.addEventListener('click', loadContact);
 contactButton.addEventListener('click', loadContact);
-submitButton.addEventListener('click', closeContact);
+submitButton.addEventListener('click', submitContact);
 exitButton.addEventListener('click', closeContact);
 
 function loadContact() {
@@ -88,6 +88,11 @@ function loadContact() {
 function closeContact() {
   contactBackground.style.display = 'none';
   contactWrapper.style.display = 'none';
+}
+function submitContact() {
+  contactBackground.style.display = 'none';
+  contactWrapper.style.display = 'none';
+  alert('Form was submitted');
 }
 
 // Scroll Effect

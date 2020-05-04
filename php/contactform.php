@@ -1,24 +1,18 @@
 <?php
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $subject = $_POST['subject'];
-  $message = $_POST['message'];
+  if(isset($_POST['submit'])) {
+    $username = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-  $email_from = $email;
+    if(empty($username) || empty($email) || empty($subject) || empty($message)) {
+      echo: '<h4>Please fill in the form</h4>';
+    } else {
+      $to = "malik.ebers@web.de";
 
-  $email_subject = 'Subject';
-
-  $email_body = "User Name: $name.\n",
-                "User Email: $email.\n",
-                "User Message: $message.\n";
-
-  $to = "malik.ebers@web.de";
-
-  $headers = "From: $email_from \r\n";
-
-  $headers = "Reply-to: $email \r\n";
-
-  mail($to, $email_subject, $email_body, $headers);
-
-  header("Location: ./index.html");
+      if(mail($to, $subject, $message, $email)) {
+        echo: '<h4>Form has been submitted</h4>';
+      }
+    }
+  } 
  ?>
