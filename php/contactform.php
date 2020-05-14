@@ -1,18 +1,16 @@
 <?php
-  if(isset($_POST['submit'])) {
-    $username = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    $username = $_REQUEST['name'];
+    $email = $_REQUEST['email'];
+    $subject = $_REQUEST['subject'];
+    $message = $_REQUEST['message'];
 
     if(empty($username) || empty($email) || empty($subject) || empty($message)) {
       echo: '<h4>Please fill in the form</h4>';
     } else {
+      
       $to = "malik.ebers@web.de";
+      mail($to, $subject, $message, $email);
 
-      if(mail($to, $subject, $message, $email)) {
-        echo: '<h4>Form has been submitted</h4>';
-      }
     }
-  } 
+
  ?>
