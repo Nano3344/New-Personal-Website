@@ -44,11 +44,17 @@ body {
 }
 .Loading img {
   width: 200px;
+  animation: spinning 2s ease infinite;
 }
 .Loading h2 {
   margin-top: 20px;
   font-family: Raleway;
   color: #212121;
+}
+@keyframes spinning {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Contact Form */
@@ -262,7 +268,6 @@ header img {
   display: flex;
   flex-direction: column;
   margin-left: 100px;
-  animation: HomeFadeIn 1s ease;
 }
 #Home .Left-Side h2 {
   font-size: 45px;
@@ -406,7 +411,7 @@ header img {
   width: 60%;
 }
 #Story .hero-content h2{
-  font-size: 40px;
+  font-size: 70px;
   margin-bottom: 30px;
   color: #ffffff;
   text-shadow: #474747 3px 3px 3px;

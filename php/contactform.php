@@ -3,12 +3,12 @@
     $email = $_REQUEST['email'];
     $subject = $_REQUEST['subject'];
     $message = $_REQUEST['message'];
+    $to = "malik.ebers@web.de";
 
     if(empty($username) || empty($email) || empty($subject) || empty($message)) {
-      echo: '<h4>Please fill in the form</h4>';
+      echo: 'Please fill in the form';
     } else {
-      
-      $to = "malik.ebers@web.de";
+
       mail($to, $subject, $message, $email);
 
     }

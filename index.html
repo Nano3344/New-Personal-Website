@@ -17,8 +17,6 @@
      <h2>Need a stronger Web Presence?</h2>
     </div>
 
-
-
     <!-- Contact Form -->
 
     <div class="contact-background" id="contact-background"></div>
@@ -61,7 +59,7 @@
        <span class="close-nav" id="close-nav">&times;</span>
        <li><a href="#Home" class="home">Home</a></li>
        <li><a href="#Story" class="story">About</a></li>
-       <li><a href="#Skills" class="skills">Skills</a></li>
+       <li><a href="#Skills" class="skills">Services</a></li>
        <li><a href="#Projects" class="projects">Projects</a></li>
        <li><p class="contact-button-2">Contact</p></li>
      </div>
@@ -93,7 +91,7 @@
       <div class="rectangle"></div>
     </div>
       <div class="hero-content">
-        <h2><span>A</span>bout Me</h2>
+        <h2>Profile</h2>
        <p class="text">
          Hi! I am Malik Ebers and I am a 19 year old freelance web developer and hobby editor from Berlin, Germany.
          I develop websites and web apps for over 2 years now for myself as a hobby and as a job for clients. If you want to see
@@ -111,7 +109,7 @@
 
    <section id="Skills">
      <div class="hero-heading fade-in">
-     <h2 class="heading">Skills</h2>
+     <h2 class="heading">Services</h2>
    </div>
      <div class="hero-skills">
       <div class="Web-Development fade-in">
@@ -213,9 +211,10 @@
   <script src="./js/index.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
   <script>
-     gsap.from('.left-header', {opacity: 0, duration: 1, y: -300})
-     gsap.from('.left-text', {opacity: 0, duration: 1, y: -200})
-     gsap.from('.button', {opacity: 0, duration: 1, y: -100})
+     $(window).on('load',function(){
+       $('.Loading').fadeOut('slow');
+     });
+     gsap.from('.Left-Side', {opacity: 0, duration: 1, y: -300})
   </script>
 
   </body>
