@@ -48,8 +48,14 @@ body {
 }
 .Loading h2 {
   margin-top: 20px;
+  font-size: 30px;
   font-family: Raleway;
+  font-weight: 100;
   color: #212121;
+}
+.Loading h2 span {
+  font-weight: bold;
+  color: #F44336;
 }
 @keyframes spinning {
   100% {
@@ -272,6 +278,11 @@ header img {
 #Home .Left-Side h2 {
   font-size: 45px;
   color: #212121;
+  margin-bottom: 10px;
+}
+#Home .Left-Side p {
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 #Home .Left-Side a {
   text-decoration: none;

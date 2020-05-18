@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="image icon" type="image/png" href="img/logo/Personal-Logo-3.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
     <title></title>
   </head>
   <body>
@@ -14,7 +15,7 @@
 
     <div class="Loading">
       <img src="img/logo/Personal-Logo-3.png">
-     <h2>Need a stronger Web Presence?</h2>
+     <h2>Need a <span>stronger</span> Web <span>Presence</span>?</h2>
     </div>
 
     <!-- Contact Form -->
@@ -22,7 +23,7 @@
     <div class="contact-background" id="contact-background"></div>
     <div class="contact-wrapper">
     <div class="contact-form">
-      <form class="contact-content" method="post" action="php/contactform.php">
+      <form class="contact-content" action="./php/contactform.php">
         <span class="exit-button">&times;</span>
         <h2>Contact Me!</h2>
         <div class="section">
@@ -59,7 +60,7 @@
        <span class="close-nav" id="close-nav">&times;</span>
        <li><a href="#Home" class="home">Home</a></li>
        <li><a href="#Story" class="story">About</a></li>
-       <li><a href="#Skills" class="skills">Services</a></li>
+       <li><a href="#Skills" class="skills">Skills</a></li>
        <li><a href="#Projects" class="projects">Projects</a></li>
        <li><p class="contact-button-2">Contact</p></li>
      </div>
@@ -72,7 +73,7 @@
    <section id="Home">
     <div class="Left-Side">
       <h2 class="left-header">Hi, my name is Malik Ebers</h2>
-      <p class="left-text">I create amazing UI's / UX's in form of Websites and Web apps in order to optimize your web presence</p>
+      <p class="left-text">I create amazing Web Products in order to optimize your Presence on the Web</p>
       <div class="button">
         <a href="#Projects">My Work</a>
       </div>
@@ -109,7 +110,7 @@
 
    <section id="Skills">
      <div class="hero-heading fade-in">
-     <h2 class="heading">Services</h2>
+     <h2 class="heading">Skills</h2>
    </div>
      <div class="hero-skills">
       <div class="Web-Development fade-in">
@@ -208,12 +209,14 @@
    <!-- JavaScript -->
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="./js/index.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
+  <script src="./js/index.js"></script>
   <script>
-     $(window).on('load',function(){
-       $('.Loading').fadeOut('slow');
-     });
+
+      $(window).on('load',function(){
+        $('.Loading').fadeOut('slow');
+      });
+
      gsap.from('.Left-Side', {opacity: 0, duration: 1, y: -300})
   </script>
 
