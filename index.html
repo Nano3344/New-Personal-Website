@@ -92,7 +92,7 @@
       <div class="rectangle"></div>
     </div>
       <div class="hero-content">
-        <h2>Profile</h2>
+        <h2 class="profileText">Profile</h2>
        <p class="text">
          Hi! I am Malik Ebers and I am a 19 year old freelance web developer and hobby editor from Berlin, Germany.
          I develop websites and web apps for over 2 years now for myself as a hobby and as a job for clients. If you want to see
@@ -214,10 +214,24 @@
   <script>
 
       $(window).on('load',function(){
-        $('.Loading').fadeOut('slow');
+        $('.Loading').delay(2000).fadeOut('slow');
       });
 
-     gsap.from('.Left-Side', {opacity: 0, duration: 1, y: -300})
+     var profileText = $('.profileText');
+     var image = $('.image-content');
+
+     var storySection = $('#Story');
+
+     storySection.mousemove(function(e) {
+       var valueX = (e.pageX * -1 / 30);
+       var valueY = (e.pageY * -1 / 30);
+
+       image.css({
+         'transform': 'translate3d('+valueX+'px, '+valueY+'px,0)'
+       });
+     });
+
+     gsap.from('.Left-Side', {opacity: 0, duration: 1, y: -300, delay: 2})
   </script>
 
   </body>

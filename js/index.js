@@ -96,6 +96,7 @@ function submitContact() {
 }
 
 // Scroll Effect
+
 EachAnim('leftfade');
 
 $(window).scroll(function(){
