@@ -523,6 +523,14 @@ header img {
   justify-content: center;
   flex-direction: row-reverse;
 }
+#Skills .Web-Development .rectangle {
+  position: absolute;
+  left: 0;
+  width: 700px;
+  height: 400px;
+  background-color: #F3F3F3;
+  z-index: -1;
+}
 #Skills .Web-Development .text-section {
   height: 100%;
   width: 50%;
@@ -540,7 +548,7 @@ header img {
 }
 #Skills .Web-Development .image-section .code-logo {
   position: absolute;
-  width: 250px;
+  width: 550px;
   animation: floating 3s ease infinite;
 }
 #Skills .pictures {
@@ -562,8 +570,16 @@ header img {
 }
 #Skills .Video-Editing .image-section .video-logo {
   position: absolute;
-  width: 250px;
+  width: 550px;
   animation: floating ease 3s infinite;
+}
+#Skills .Video-Editing .rectangle {
+  position: absolute;
+  right: 0;
+  width: 700px;
+  height: 400px;
+  background-color: #F3F3F3;
+  z-index: -1;
 }
 #Skills .Video-Editing .text-section {
   height: 100%;
