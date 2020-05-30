@@ -178,7 +178,7 @@ header img {
   margin: 5px;
   border-radius: 10px;
   height: 5px;
-  background-color: #212121;
+  background-color: white;
   transition: 0.5s;
   z-index: 1;
 }
@@ -263,7 +263,9 @@ header img {
 }
 
 /* Home Section */
-
+section {
+  background-color: #313C4A;
+}
 #Home {
   display: flex;
   position: relative;
@@ -273,6 +275,7 @@ header img {
   font-family: Raleway;
   min-height: 100vh;
   width: 100%;
+  background-color: #313C4A;
 }
 #Home .Left-Side {
   width: 50%;
@@ -283,24 +286,26 @@ header img {
 }
 #Home .Left-Side h2 {
   font-size: 45px;
-  color: #212121;
+  color: white;
   margin-bottom: 10px;
+  font-weight: lighter;
 }
 #Home .Left-Side p {
   margin-bottom: 10px;
   font-size: 20px;
+  color: white;
 }
 #Home .Left-Side a {
   text-decoration: none;
-  color: #F44336;
+  color: white;
   font-weight: bold;
   padding: 10px 25px;
-  border: 3px solid #F44336;
+  border: 3px solid #00BC61;
+  background-color: #00BC61;
   border-radius: 4px;
 }
 #Home .Left-Side a:hover {
   transition: 0.5s;
-  background-color: #F44336;
   color: white;
 }
 #Home .Left-Side div {
@@ -313,6 +318,7 @@ header img {
 }
 #Home .Right-Side img {
   animation: FloatIn 1s ease, floating 3s ease 1s infinite;
+  margin-left: 70px;
 }
 
 /* mobile */
@@ -348,7 +354,7 @@ header img {
     margin-left: 0;
   }
   #Home .Left-Side h2 {
-    font-size: 27px;
+    font-size: 25px;
     text-align: center;
   }
   #Home .Left-Side p {
@@ -364,6 +370,7 @@ header img {
   }
   #Home .Right-Side img{
     margin-top: 200px;
+    margin-left: 0px;
     width: 350px;
   }
 }
@@ -421,7 +428,7 @@ header img {
   position: absolute;
   top: 50px;
   left: -40px;
-  background-color: #F44336;
+  background-color: #00BC61;
   z-index: -1;
 }
 #Story .hero-profile .hero-content {
@@ -435,23 +442,24 @@ header img {
 }
 #Story .hero-content p {
   width: 500px;
+  color: white;
 }
 #Story .hero-content a {
   text-decoration: none;
-  color: #212121;
+  color: white;
 }
 #Story .hero-content .contact-button {
   margin-top: 40px;
-  color: #F44336;
+  color: #00BC61;
   font-weight: bold;
   border-radius: 4px;
-  border: 2px solid #F44336;
+  border: 2px solid #00BC61;
   width: 105px;
   padding: 10px 20px;
 }
 #Story .hero-content .contact-button:hover {
   cursor: pointer;
-  background-color: #F44336;
+  background-color: #00BC61;
   color: white;
   transition: 0.5s;
 }
@@ -494,9 +502,10 @@ header img {
   display: flex;
   justify-content: center;
   font-family: Raleway;
-  font-weight: bold;
+  font-weight: lighter;
+  color: white;
   font-size: 25px;
-  border-bottom: 2px solid #F44336;
+  border-bottom: 2px solid #00BC61;
 }
 
 #Skills {
@@ -538,6 +547,19 @@ header img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+#Skills .Web-Development .text-section h2{
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+#Skills .Web-Development .text-section p{
+  font-weight: lighter;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-top: 15px;
 }
 #Skills .Web-Development .image-section {
   height: 100%;
@@ -594,11 +616,18 @@ header img {
   color: black;
 }
 .text-section p {
+  font-weight: lighter;
+  color: white;
+  font-size: 20px;
+  letter-spacing: 4px;
+  margin-top: 15px;
   width: 70%;
 }
 .text-section h2 {
-  color: #212121;
-  font-size: 40px;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 4px;
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
@@ -607,6 +636,9 @@ header img {
 @media (max-width: 650px) {
   #Skills .Web-Development {
     flex-direction: column;
+  }
+  #Skills .Web-Development .rectangle {
+    width: 200px;
   }
   #Skills .Web-Development .text-section {
     width: 100%;
@@ -619,6 +651,9 @@ header img {
   }
   #Skills .Video-Editing {
     flex-direction: column;
+  }
+  #Skills .Video-Editing .rectangle {
+    width: 200px;
   }
   #Skills .Video-Editing .text-section {
     width: 100%;
@@ -690,13 +725,13 @@ header img {
 }
 #Projects .Image-slider .image a:nth-child(1) {
   text-decoration: none;
-  background-color: #F44336;
+  background-color: #00BC61;
   color: white;
   font-family: Raleway;
   font-weight: bolder;
   padding: 8px 20px;
   margin-right: 30px;
-  border: 3px solid #F44336;
+  border: 3px solid #00BC61;
   border-radius: 5px;
 }
 #Projects .Image-slider .image a:nth-child(2) {
@@ -745,7 +780,7 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #F44336;
+  background-color: #00BC61;
   padding: 15px;
 }
 footer div {
