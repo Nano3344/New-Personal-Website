@@ -51,22 +51,19 @@ for(let i = 0; i < logo.length; i++) {
   console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
 }
 
-
-
+const topnavigation = document.querySelector('.top-navigation');
 const navburger = document.querySelector('.nav-burger');
 const navbar = document.querySelector('.nav-bar');
 const exitNav = document.querySelector('.close-nav');
 
 navburger.addEventListener('click', slideIn);
 exitNav.addEventListener('click', slideOut);
-
 function slideIn() {
    navbar.style.display = 'block';
 }
 function slideOut() {
  navbar.style.display = 'none';
 }
-
 // Contact Form
 
 var contactBackground = document.querySelector('.contact-background');
