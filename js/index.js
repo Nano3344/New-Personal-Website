@@ -1,23 +1,3 @@
-// Smooth scrolling
-
-$(function() {
-  $('a[href^="#"]').stop().click(function() {
-     if(location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-       var UD_HASH = this.hash;
-       var UD_ZIEL = $(this.hash);
-       if(UD_ZIEL.length) {
-         var UD_ABSTAND_TOP = UD_ZIEL.offset().top;
-
-         $('html, body').animate({scrollTop: UD_ABSTAND_TOP},600,function(){
-            window.location.hash = UD_HASH;
-         });
-         return false;
-       }
-
-     }
-  });
-});
-
 // Fade-in on scroll
 
 const fader = document.querySelectorAll('.fade-in');
@@ -41,15 +21,9 @@ const fadeOnScroll = new IntersectionObserver(function(
 
   fader.forEach(fader => {
     fadeOnScroll.observe(fader);
-  })
+  });
 
-// Homepage SVG
-
-const logo = document.querySelectorAll('#logo path');
-
-for(let i = 0; i < logo.length; i++) {
-  console.log(`Letter ${i} is ${logo[i].getTotalLength()}`);
-}
+// Mobile Nav
 
 const topnavigation = document.querySelector('.top-navigation');
 const navburger = document.querySelector('.nav-burger');
@@ -64,17 +38,26 @@ function slideIn() {
 function slideOut() {
  navbar.style.display = 'none';
 }
+
 // Contact Form
 
 var contactBackground = document.querySelector('.contact-background');
 var contactWrapper = document.querySelector('.contact-wrapper');
 var contactButton2 = document.querySelector('.contact-button-2');
-var contactButton = document.querySelector('.contact-button');
+//var contactButton = document.querySelector('.contact-button');
+var getintouch = document.querySelector('.get-in-touch');
+var letsconnect = document.querySelector('.connect');
 var submitButton = document.querySelector('.submit');
 var exitButton = document.querySelector('.exit-button');
 
 contactButton2.addEventListener('click', loadContact);
-contactButton.addEventListener('click', loadContact);
+//contactButton.addEventListener('click', loadContact);
+if(letsconnect){
+  letsconnect.addEventListener('click', loadContact);
+}
+if(getintouch) {
+getintouch.addEventListener('click', loadContact);
+}
 submitButton.addEventListener('click', submitContact);
 exitButton.addEventListener('click', closeContact);
 
@@ -90,36 +73,6 @@ function submitContact() {
   contactBackground.style.display = 'none';
   contactWrapper.style.display = 'none';
   alert('Form was submitted');
-}
-
-// Scroll Effect
-
-EachAnim('leftfade');
-
-$(window).scroll(function(){
-  EachAnim('leftfade');
-});
-
-function EachAnim(name) {
-  $('.' + name).each(function() {
-    switch (name) {
-      case 'leftfade': AddClass(this, 'fade-left');
-        break;
-    }
-  });
-};
-
-function AddClass(object, name) {
-  if(IsVisible(object)) {
-    $(object).addClass(name);
-  }
-}
-
-function IsVisible(object) {
-  var viewport = $(window).scrollTop() + $(window).height();
-  var border = $(object).offset();
-  border.bottom = border.top + $(object).outerHeight();
-  return (!(viewport < (border.top + 250) || $(window).scrollTop() > (border.bottom)));
 }
 
 // Image Slider
