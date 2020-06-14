@@ -63,9 +63,62 @@ home top section
   width: 50%;
   height: 100%;
 }
-#Home .Right-Side img {
+#Home .Right-Side svg {
+  width: 500px;
+}
+#Home .Right-Side svg g:nth-child(6){
   animation: FloatIn 1s ease, floating 3s ease 1s infinite;
-  margin-left: 70px;
+}
+#Home .Right-Side svg g:nth-child(1){
+  animation: FloatIn 1.5s ease;
+}
+#Home .Right-Side svg g:nth-child(2){
+  animation: FloatIn 1.2s ease;
+}
+#Home .Right-Side svg g:nth-child(3){
+  animation: FloatIn 2s ease;
+}
+#Home .Right-Side svg g:nth-child(4){
+  animation: FloatIn 2.5s ease;
+}
+#Home .Right-Side svg g:nth-child(5){
+  animation: FloatIn 2.2s ease;
+}
+#Home .Right-Side svg g:nth-child(7){
+  animation: FloatIn 2s ease;;
+}
+#Home .Right-Side svg g:nth-child(8){
+  animation: FloatIn 1.4s ease;
+}
+#Home .Right-Side svg g:nth-child(9){
+  animation: FloatIn 2s ease;
+}
+#Home .Right-Side svg g:nth-child(10){
+  animation: FloatIn 2.3s ease;
+}
+#Home .Right-Side svg g:nth-child(11){
+  animation: FloatIn 1.4s ease;
+}
+#Home .Right-Side svg g:nth-child(12){
+  animation: FloatIn 1.9s ease;
+}
+#Home .Right-Side svg g:nth-child(13){
+  animation: FloatIn 1.9s ease;
+}
+#Home .Right-Side svg g:nth-child(14){
+  animation: FloatIn 2.5s ease;
+}
+#Home .Right-Side svg g:nth-child(15){
+  animation: FloatIn 2.9s ease;
+}
+#Home .Right-Side svg g:nth-child(16){
+  animation: FloatIn 1.6s ease;
+}
+#Home .Right-Side svg g:nth-child(17){
+  animation: FloatIn 1.8s ease;
+}
+#Home .Right-Side svg g:nth-child(18){
+  animation: FloatIn 2s ease;
 }
 
 /* mobile */
@@ -98,10 +151,14 @@ home top section
   #Home .Left-Side h2 {
     font-size: 25px;
     text-align: center;
+    padding: 20px;
   }
   #Home .Left-Side p {
-    width: 80%;
     text-align: center;
+    padding: 20px;
+  }
+  #Home .Left-Side .button {
+    justify-content: center;
   }
   #Home .Right-Side {
     width: 50%;
@@ -110,7 +167,7 @@ home top section
     justify-content: center;
     align-items: center;
   }
-  #Home .Right-Side img{
+  #Home .Right-Side svg{
     margin-top: 200px;
     margin-left: 0px;
     width: 350px;
