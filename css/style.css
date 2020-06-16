@@ -16,17 +16,24 @@ home top section
   height: 100%;
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+#Home .Left-Side .text-container {
+  width: 90%;
+  padding: 30px;
 }
 #Home .Left-Side h2 {
-  font-size: 45px;
+  font-size: 42px;
   color: white;
   margin-bottom: 10px;
   font-weight: bold;
 }
 #Home .Left-Side p {
-  margin-bottom: 10px;
+  margin-top: 20px;
   font-size: 20px;
+  font-weight: lighter;
+  letter-spacing: 4px;
   color: white;
 }
 #Home .button {
@@ -34,6 +41,7 @@ home top section
   align-items: center;
   flex-direction: row;
   transition: 0.5s;
+  margin-top: 20px;
 }
 #Home .button:hover {
   transition: 0.5s;
@@ -54,12 +62,11 @@ home top section
    color: #212121;
    text-decoration: none;
    font-weight: bold;
-   margin-left: 80px;
-}
-#Home .Left-Side div {
-  margin-top: 20px;
 }
 #Home .Right-Side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
   height: 100%;
 }
@@ -121,23 +128,26 @@ home top section
   animation: FloatIn 2s ease;
 }
 
-/* mobile */
+/* IPAD */
 
 @media (max-width: 1100px) {
   #Home .Left-Side h2{
-    font-size: 30px;
+    font-size: 35px;
   }
   #Home .Left-Side p {
-    font-size: 14px;
+    font-size: 18px;
   }
-  #Home .Right-Side img {
+  #Home .Right-Side svg {
     width: 400px;
   }
 }
+
+/* IPad */
+
 @media (max-width: 850px) {
   #Home {
     flex-direction: column-reverse;
-    height: 20vh;
+    height: 120vh;
   }
    #Home .Left-Side {
     margin-top: 70px;
@@ -149,13 +159,12 @@ home top section
     margin-left: 0;
   }
   #Home .Left-Side h2 {
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
     padding: 20px;
   }
   #Home .Left-Side p {
     text-align: center;
-    padding: 20px;
   }
   #Home .Left-Side .button {
     justify-content: center;
@@ -169,8 +178,15 @@ home top section
   }
   #Home .Right-Side svg{
     margin-top: 200px;
-    margin-left: 0px;
-    width: 350px;
+    width: 400px;
+  }
+}
+
+/* Phone */
+
+@media (max-width: 500px) {
+  #Home .Right-Side svg {
+    width: 300px;
   }
 }
 
@@ -290,10 +306,10 @@ home middle section
   margin-bottom: 30px;
 }
 .Customers-right p {
-  font-family: monospace;
-  color: white;
+  font-size: 20px;
   font-weight: lighter;
-  font-size: 18px;
+  letter-spacing: 4px;
+  color: white;
 }
 
 /* mobile */
@@ -364,6 +380,7 @@ home between section
   position: absolute;
   margin-top: 20px;
   margin-left: 20px;
+  padding: 20px;
   width: 80%;
   height: 200px;
   background-color: #212121;
@@ -488,11 +505,19 @@ home end section
     height: 130vh;
   }
   .Problem-left {
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 50%;
     margin-top: 100px;
   }
+  .Problem-Left .text-container {
+    text-align: center;
+  }
   .Problem-left h2{
+    text-align: center;
+  }
+  .Problem-left p {
     text-align: center;
   }
   .Problem-left .button {

@@ -360,6 +360,9 @@ mobile navigation-bar
   header {
     padding: 20px 50px;
   }
+  header img {
+    width: 60px;
+  }
   .top-navigation {
     display: flex;
   }
