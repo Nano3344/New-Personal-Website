@@ -15,6 +15,33 @@
   </head>
   <body>
 
+        <!-- Contact Form -->
+
+        <div class="contact-background" id="contact-background"></div>
+        <div class="contact-wrapper">
+        <div class="contact-form">
+          <form class="contact-content" id="form" onsubmit="submitForm(); return false;" action="contactform.php">
+            <span class="exit-button">&times;</span>
+            <h2>Contact Me!</h2>
+            <div class="section">
+               <input class="name" id="name" type="text" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="section">
+               <input class="email" id="email" type="text" name="email" placeholder="Your email" required>
+            </div>
+            <div class="section">
+               <input class="subject" type="text" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="section">
+               <textarea class="message" id="message" type="text" name="message" placeholder="Message..."></textarea>
+            </div>
+            <div class="button-section">
+                <input class="submit" id="submit" value="Submit Form" type="submit" name="btn-send"></input>
+            </div>
+          </form>
+        </div>
+      </div>
+
         <!-- header -->
 
        <header>
@@ -40,11 +67,11 @@
          <nav class="nav-bar">
            <div class="nav-wrapper">
            <span class="close-nav" id="close-nav">&times;</span>
-           <li><a href="#Home" class="home">Home</a></li>
-           <li><a href="#Projects" class="projects">Projects</a></li>
-           <li><a href="#Story" class="story">About</a></li>
-           <li><a href="#Skills" class="skills">Skills</a></li>
+           <li><a href="services.html" class="skills">Services</a></li>
+           <li><a href="work.html" class="projects">Work</a></li>
+           <li><a href="about.html" class="about">About</a></li>
            <li><p class="contact-button-2">Contact</p></li>
+           <a class="Call" href="">Book a free call!</a>
          </div>
          </nav>
        </div>
@@ -63,7 +90,7 @@
            </div>
          </div>
          <div class="Page-1-right">
-           <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.91 582.64">
+           <svg class="slide-top" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430.91 582.64">
   <defs>
     <style>
       .cls-1 {

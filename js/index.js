@@ -1,6 +1,36 @@
+// Ajax contact form
+
+function _ (id) {
+  return document.getElementById(id);
+}
+
+function submitForm(){
+	_("submit").disabled = true;
+	var formdata = new FormData();
+	formdata.append( "name", _("name").value );
+	formdata.append( "email", _("email").value );
+  formdata.append( "subject", _("subject").value );
+	formdata.append( "message", _("message").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "contactform.php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("submit").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+
 // Fade-in on scroll
 
 const fader = document.querySelectorAll('.fade-in');
+const slideLeft = document.querySelectorAll('.slide-left');
+const slideTop = document.querySelectorAll('.slide-top');
 
 const options = {
   threshold: 0.5,
@@ -14,6 +44,8 @@ const fadeOnScroll = new IntersectionObserver(function(
       return;
     } else {
       entry.target.classList.add('appear');
+      entry.target.classList.add('appear-2');
+      entry.target.classList.add('appear-3');
       fadeOnScroll.unobserve(entry.target);
     }
   });
@@ -22,6 +54,12 @@ const fadeOnScroll = new IntersectionObserver(function(
   fader.forEach(fader => {
     fadeOnScroll.observe(fader);
   });
+  slideLeft.forEach(slideLeft => {
+    fadeOnScroll.observe(slideLeft);
+  })
+  slideTop.forEach(slideTop => {
+    fadeOnScroll.observe(slideTop);
+  })
 
 // Mobile Nav
 
@@ -33,10 +71,10 @@ const exitNav = document.querySelector('.close-nav');
 navburger.addEventListener('click', slideIn);
 exitNav.addEventListener('click', slideOut);
 function slideIn() {
-   navbar.style.display = 'block';
+   navbar.classList.add('nav-bar-fade');
 }
 function slideOut() {
- navbar.style.display = 'none';
+ navbar.classList.remove('nav-bar-fade');
 }
 
 // Contact Form

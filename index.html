@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/general.css">
     <link rel="stylesheet" href="/css/animations.css">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="image icon" type="image/png" href="img/logo/Malik-Logo.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
     <title></title>
@@ -25,23 +26,23 @@
     <div class="contact-background" id="contact-background"></div>
     <div class="contact-wrapper">
     <div class="contact-form">
-      <form class="contact-content" action="./php/contactform.php">
+      <form class="contact-content" id="form" onsubmit="submitForm(); return false;" action="contactform.php">
         <span class="exit-button">&times;</span>
         <h2>Contact Me!</h2>
         <div class="section">
-           <input class="name" type="text" name="name" placeholder="Your Name" required>
+           <input class="name" id="name" type="text" name="name" placeholder="Your Name" required>
         </div>
         <div class="section">
-           <input class="email" type="text" name="email" placeholder="Your email" required>
+           <input class="email" id="email" type="text" name="email" placeholder="Your email" required>
         </div>
         <div class="section">
            <input class="subject" type="text" name="subject" placeholder="Subject" required>
         </div>
         <div class="section">
-           <textarea class="message" type="text" name="message" placeholder="Message..."></textarea>
+           <textarea class="message" id="message" type="text" name="message" placeholder="Message..."></textarea>
         </div>
         <div class="button-section">
-            <p class="submit" id="submit" type="submit" name="btn-send">Submit</p>
+            <input class="submit" id="submit" value="Submit Form" type="submit" name="btn-send"></input>
         </div>
       </form>
     </div>
@@ -207,11 +208,11 @@
    <!-- Convincing -->
 
    <div class="Traffic">
-     <div class="Traffic-container fade-in">
+     <div class="Traffic-container slide-left">
       <h2>Your Shopify Website could multiply your sales!</h2>
       <h3>That's why you need the right strategy</h3>
     </div>
-    <div class="Traffic-shadow fade-in"></div>
+    <div class="Traffic-shadow slide-left"></div>
    </div>
 
    <!-- Questioning -->
@@ -219,7 +220,7 @@
    <section id="Customers">
       <div class="Customers-left">
         <div class="image fade-in">
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg class=".fade-in" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
 <style type="text/css">
 	.st0{enable-background:new    ;}
@@ -1397,7 +1398,7 @@
 </div>
       </div>
       <div class="Customers-right">
-        <div class="text-container fade-in">
+        <div class="text-container slide-top">
         <h2>Is your Website not good at getting Customers?<h2>
           <p>Are you just not seeing results to get more customers and more Sales? I can help you to turn
              that around with extremely effective strategies!
@@ -1409,11 +1410,11 @@
    <!-- Testimonials -->
 
    <div class="Traffic-2">
-     <div class="Traffic-container fade-in">
+     <div class="Traffic-container slide-top">
       <h2>The right strategies are crucial</h2>
       <h3>Almost <strong>90%</strong> of your visitors might not convert into customers!</h3>
     </div>
-    <div class="Traffic-shadow fade-in"></div>
+    <div class="Traffic-shadow slide-top"></div>
    </div>
 
    <!-- Problem Fix -->
@@ -1465,7 +1466,7 @@
   <script>
 
       $(window).on('load',function(){
-        $('.Loading').fadeOut('slow');
+        $('.Loading').toggleClass('Loading-Fade');
       });
 
      var profileText = $('.profileText');
