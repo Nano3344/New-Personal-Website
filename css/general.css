@@ -171,7 +171,7 @@ header {
   animation: HomeFadeIn 2s ease 0s;
 }
 header img {
-  width: 80px;
+  width: 65px;
 }
 
 /* ==============
@@ -353,7 +353,7 @@ mobile navigation-bar
     padding: 20px 50px;
   }
   header img {
-    width: 60px;
+    width: 50px;
   }
   .top-navigation {
     display: flex;
