@@ -23,6 +23,7 @@ home top section
 #Home .Left-Side .text-container {
   width: 90%;
   padding: 30px;
+  animation: FloatDown 1s ease;
 }
 #Home .Left-Side h2 {
   font-size: 42px;
@@ -594,7 +595,13 @@ services top section
 .sales-left svg #Check {
   animation: 2s serviceTop-hover ease infinite;
 }
-.sales-left svg #Users {
+.sales-left svg #User-1 {
+  animation: 3s serviceTop-hover ease infinite;
+}
+.sales-left svg #User-2 {
+  animation: 3s serviceTop-hover ease infinite;
+}
+.sales-left svg #User-3 {
   animation: 3s serviceTop-hover ease infinite;
 }
 .sales-left svg #_-1 {
@@ -942,9 +949,6 @@ about top section
 .Page-1-right svg {
   width: 300px;
   animation: 1s HomeFadeIn ease;
-}
-.Page-1-right svg {
-
 }
 @media (max-width: 850px) {
   .Page-1-left .text-container {

@@ -9,14 +9,13 @@ function submitForm(){
 	var formdata = new FormData();
 	formdata.append( "name", _("name").value );
 	formdata.append( "email", _("email").value );
-  formdata.append( "subject", _("subject").value );
 	formdata.append( "message", _("message").value );
 	var ajax = new XMLHttpRequest();
 	ajax.open( "POST", "contactform.php" );
 	ajax.onreadystatechange = function() {
 		if(ajax.readyState == 4 && ajax.status == 200) {
 			if(ajax.responseText == "success"){
-				_("form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+				//_("form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
 			} else {
 				_("status").innerHTML = ajax.responseText;
 				_("submit").disabled = false;
@@ -89,7 +88,6 @@ var submitButton = document.querySelector('.submit');
 var exitButton = document.querySelector('.exit-button');
 
 contactButton2.addEventListener('click', loadContact);
-//contactButton.addEventListener('click', loadContact);
 if(letsconnect){
   letsconnect.addEventListener('click', loadContact);
 }
@@ -111,6 +109,34 @@ function submitContact() {
   contactBackground.style.display = 'none';
   contactWrapper.style.display = 'none';
   alert('Form was submitted');
+}
+
+// Booking Form
+
+var bookingBackground = document.querySelector('.contact-background');
+var bookingWrapper = document.querySelector('.booking-wrapper');
+var bookingButton2 = document.querySelector('.Call');
+var bookingButton3 = document.querySelector('.Call-2');
+var booked = document.querySelector('.booking');
+var exitButton2 = document.querySelector('.exit-button-2');
+
+bookingButton2.addEventListener('click', loadBooking);
+bookingButton3.addEventListener('click', loadBooking);
+exitButton2.addEventListener('click', closeBooking);
+booked.addEventListener('click', callBooked);
+
+function loadBooking() {
+  contactBackground.style.display = 'block';
+  bookingWrapper.style.display = 'block';
+}
+function closeBooking() {
+  contactBackground.style.display = 'none';
+  bookingWrapper.style.display = 'none';
+}
+function callBooked() {
+  contactBackground.style.display = 'none';
+  bookingWrapper.style.display = 'none';
+  alert('Call was successfully booked');
 }
 
 // Image Slider

@@ -4,16 +4,48 @@
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="/css/style.css">
-      <link rel="stylesheet" href="/css/general.css">
-      <link rel="stylesheet" href="/css/animations.css">
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="css/general.css">
+      <link rel="stylesheet" href="css/animations.css">
+      <link rel="stylesheet" href="css/resolutions.css">
       <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
       <link rel="image icon" type="image/png" href="img/logo/Website-Logo.png">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
       <title></title>
     </head>
   </head>
   <body>
+
+    <!-- Booking Form -->
+
+    <div class="booking-wrapper">
+    <div class="booking-form">
+      <form class="booking-content" id="booking" onsubmit="submitBooking(); return false;" action="booking.php">
+        <span class="exit-button-2">&times;</span>
+        <h2>Book a Call</h2>
+        <div class="section">
+          <p>we will discuss all your problems in your brand,
+            and make a strong growth
+            plan to help you reach your goals</p>
+          <p>Time: 30min</p>
+        </div>
+        <div class="section">
+           <input class="name" id="name" type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="section">
+           <input class="email" id="email" type="text" name="email" placeholder="Your email" required>
+        </div>
+        <div class="section">
+          <input type="date" id="date" class="date" name="date">
+        </div>
+        <div class="section">
+          <input type="time" id="time" class="time" name="time">
+        </div>
+        <div class="button-section">
+            <input class="booked" id="submit" value="Submit booking" type="submit" name="btn-send"></input>
+        </div>
+      </form>
+    </div>
+  </div>
 
         <!-- Contact Form -->
 
@@ -48,7 +80,7 @@
          <a href="index.html"><img src="img/logo/Website-Logo.png"></a>
          <div class="navigation">
            <nav class="normal-navigation">
-             <a class="Call" href="">Book a free call!</a>
+             <p class="Call">Book a free call!</p>
              <li><a href="services.html" class="projects">Services</a></li>
              <li><a href="work.html" class="story">Work</a></li>
              <li class="underline"><a href="about.html" class="skills">About</a></li>
@@ -71,7 +103,7 @@
            <li><a href="work.html" class="projects">Work</a></li>
            <li><a href="about.html" class="about">About</a></li>
            <li><p class="contact-button-2">Contact</p></li>
-           <a class="Call" href="">Book a free call!</a>
+           <p class="Call-2">Book a free call!</p>
          </div>
          </nav>
        </div>
@@ -205,5 +237,6 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
       <script src="js/index.js"></script>
+      <script src="js/bookingform.js"></script>
   </body>
 </html>

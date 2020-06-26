@@ -5,21 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/general.css">
-    <link rel="stylesheet" href="/css/animations.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/resolutions.css">
     <link rel="image icon" type="image/png" href="img/logo/Website-Logo.png">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.js"></script>
     <title></title>
   </head>
   <body>
 
     <!-- Loading screen -->
 
-    <div class="Loading">
+    <!--<div class="Loading">
       <img src="img/logo/Website-Logo.png">
      <h2>Need a <span>strong</span> Web <span>Presence</span>?</h2>
+   </div> -->
+
+  <!--  Booking Form -->
+
+    <div class="booking-wrapper">
+    <div class="booking-form">
+      <form class="booking-content" id="booking" onsubmit="submitBooking(); return false;" action="booking.php">
+        <span class="exit-button-2">&times;</span>
+        <h2>Book a Call</h2>
+        <div class="section">
+          <p>we will discuss all your problems in your business,
+            and figure out how you can achieve your goals!</p>
+          <p>Time: 30min</p>
+        </div>
+        <div class="section">
+           <input class="name2" id="name2" type="text" name="name2" placeholder="Your Name" required>
+        </div>
+        <div class="section">
+           <input class="email2" id="email2" type="text" name="email2" placeholder="Your email" required>
+        </div>
+        <div class="section">
+          <input type="date" id="date" class="date" name="date">
+        </div>
+        <div class="section">
+          <input type="time" id="time" class="time" name="time">
+        </div>
+        <div class="button-section">
+            <input class="booking" id="submit2" value="Submit booking" type="submit" name="btn-send2"></input>
+        </div>
+      </form>
     </div>
+  </div>
 
     <!-- Contact Form -->
 
@@ -54,7 +85,7 @@
      <a href="index.html"><img src="img/logo/Website-Logo.png"></a>
      <div class="navigation">
        <nav class="normal-navigation">
-         <a class="Call" href="php/contactform.php">Book a free call!</a>
+         <p class="Call">Book a free call!</a>
          <li><a href="services.html" class="projects">Services</a></li>
          <li><a href="work.html" class="story">Work</a></li>
          <li><a href="about.html" class="skills">About</a></li>
@@ -77,7 +108,7 @@
        <li><a href="work.html" class="projects">Work</a></li>
        <li><a href="about.html" class="about">About</a></li>
        <li><p class="contact-button-2">Contact</p></li>
-       <a class="Call" href="">Book a free call!</a>
+       <p class="Call-2">Book a free call!</p>
      </div>
      </nav>
    </div>
@@ -208,11 +239,11 @@
    <!-- Convincing -->
 
    <div class="Traffic">
-     <div class="Traffic-container slide-left">
+     <div class="Traffic-container slide-top">
       <h2>Your Shopify Website could multiply your sales!</h2>
       <h3>That's why you need the right strategy</h3>
     </div>
-    <div class="Traffic-shadow slide-left"></div>
+    <div class="Traffic-shadow slide-top"></div>
    </div>
 
    <!-- Questioning -->
@@ -1462,12 +1493,13 @@
 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/bookingform.js"></script>
   <script>
 
-      $(window).on('load',function(){
+      /*$(window).on('load',function(){
         $('.Loading').toggleClass('Loading-Fade');
-      });
+      });*/
 
      var profileText = $('.profileText');
      var image = $('.image-content');
@@ -1483,7 +1515,6 @@
        });
      });
 
-     gsap.from('.Left-Side', {opacity: 0, duration: 1, y: -300})
   </script>
 
   </body>

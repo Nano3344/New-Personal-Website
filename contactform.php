@@ -1,8 +1,7 @@
 <?php
-if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['subject']) && isset($_POST['message']) ){
+if( isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']) ){
 	$name = $_POST['name']; // HINT: use preg_replace() to filter the data
 	$email = $_POST['email'];
-	$thematik = $_POST['subject'];
 	$message = nl2br($_POST['message']);
 	$to = "malik.ebers@web.de";
 	$from = $email;
