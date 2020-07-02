@@ -583,6 +583,9 @@ services top section
   margin-bottom: 30px;
   color: white;
 }
+.sales-right h2 span {
+  text-decoration: underline;
+}
 .sales-right p {
   font-family: Raleway;
   letter-spacing: 4px;
