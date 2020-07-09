@@ -2,12 +2,13 @@
 if(isset($_POST['name2']) && isset($_POST['email2']) && isset($_POST['date']) && isset($_POST['time']) ){
   $date = $_POST['date'];
   $time = $_POST['time'];
+  $phone = $_POST['phone'];
   $name2 = $_POST['name2']; // HINT: use preg_replace() to filter the data
 	$email2 = $_POST['email2'];
 	$to = "malik.ebers@web.de";
 	$from = $email2;
 	$subject = 'Booked Call';
-	$message = '<b>Date: </b>'.$date.' <b>Time: </b>'.$time.' <b>Name:</b> '.$name2.' <br><b>Email:</b> '.$email2;
+	$message = '<br><b>Date: </b><br>'.$date.' <br><b>Time: </b><br>'.$time.' <br><b>Name:</b><br> '.$name2.' <br><b>Email:</b><br> '.$email2.' <br><b>Phone:</b><br> '.$phone;
 	$headers = "From: $from\n";
 	$headers .= "MIME-Version: 1.0\n";
 	$headers .= "Content-type: text/html; charset=iso-8859-1\n";
