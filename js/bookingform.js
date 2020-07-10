@@ -9,7 +9,6 @@ function submitBooking(){
 	var bookingdata = new FormData();
 	bookingdata.append( "name2", _("name2").value );
 	bookingdata.append( "email2", _("email2").value );
-  bookingdata.append( "phone", _("phone").value );
   bookingdata.append( "date", _("date").value );
   bookingdata.append( "time", _("time").value );
 	var ajax = new XMLHttpRequest();
